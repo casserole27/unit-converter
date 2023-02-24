@@ -23,7 +23,7 @@ Frontend Developer Career Path
 ### The challenge
 
 Requirements:
-- follow the design spec
+- follow the design spec [Figma design](https://www.figma.com/file/w4ctQVGzbJpFRoS41wQi4V/Unit-Conversion-(Copy)?node-id=0%3A1&t=HMzMxtgPubz4mkv8-0)
 - generate all conversions when the user clicks "convert"
 - round the numbers down to three decimal places
 

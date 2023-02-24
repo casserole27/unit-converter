@@ -7,20 +7,58 @@
     
     <title>Unit Converter</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">     
+    
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <!-- 
     Author: Cassie Lewis
     https://clewisdev.com
-    Date: 
+    Date: February 2023
  -->
 
  <body>
+
+    <header>
+        
+        <h1 class="title">Metric/Imperial Unit Conversion</h1>
+
+        <label class="hidden" for="number-entry">Number</label>
+        <input type="text" id="result-one" name="number-entry">
+
+        <button id="convert">Convert</button>
+
+    </header>
+
+    <section>
+
+        <div class="units">
+            <h2 class="units-subtitle">Length (Meter/Feet)</h2>
+            <p></p>
+        </div>
+
+        <div class="measurements"></div>
+            <h2 class="units-subtitle">Volume (Liters/Gallons)</h2>
+            <p></p>
+        </div>
+
+        <div class="measurements"></div>
+            <h2 class="units-subtitle">Mass (Kilograms/Pounds)</h2>
+            <p></p>
+        </div>
+
+
+    </section>
+
+    <main>
+
+
+
+    </main>
+
     
     <script src="index.js"></script>
  </body>

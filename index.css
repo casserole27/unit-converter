@@ -37,3 +37,23 @@ https://coolors.co
 }
 
 /******* GLOBAL STYLES *******/
+
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+/****** HIDE LABELS FOR TEXT INPUT FIELDS ******/
+
+.hidden {
+    position: absolute;
+    clip-path: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+  } 
