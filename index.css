@@ -22,7 +22,7 @@ Figma design file: https://www.figma.com/file/w4ctQVGzbJpFRoS41wQi4V/Unit-Conver
   
     
     /*BORDER RADIUS*/
-    --br-soft: 1rem;
+    --br-soft: .5rem;
     --br-round: 50%;
     
     /*FONT SIZES*/
@@ -59,14 +59,13 @@ body {
 
 header {
     background-color: var(--periwinkle);
-    padding: 1rem;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
+    padding: 2rem 3rem;
 }
 
 h1 {
     font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
 }
 
 input {
@@ -75,16 +74,20 @@ input {
     height: 85px;
     font-family: 'Inter', sans-serif;
     font-size: 3.625rem;
+    font-weight: 800;
     background-color: var(--periwinkle);
     color: var(--white);
     accent-color: #B295FF;
     text-align: center;
+    padding: .25rem;
     margin: 0 auto;
+    margin-bottom: 1.7rem;
     border: 2px solid #B295FF;
 }
 
 input::placeholder {
     color: white;
+    font-weight: 800;
 }
 
 
@@ -94,8 +97,11 @@ button {
     color: var(--dark-gray);
     background-color: var(--white);
     font-family: 'Inter', sans-serif;
-    padding: .25rem .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .5rem 1rem;
     margin: 0 auto;
+    border-radius: var(--br-soft);
 }
 
 /****** MAIN CONTAINER ******/
@@ -108,20 +114,31 @@ button {
 
 /****** UNITS SECTION ******/
 
+
 section {
-    padding: 1rem;
     background-color: var(--dark-gray);
+    padding: 2rem 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
 }
 
 .units {
     width: 100%;
+    height: 120px;
     background-color: var(--med-gray);
     padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .units-subtitle {
     font-size: 1.25rem;
+    font-weight: 400;
     color: var(--lilac);
+    margin-bottom: .875rem;
 }
 
  .conv-text {
