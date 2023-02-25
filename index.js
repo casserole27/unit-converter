@@ -23,7 +23,7 @@ const convertLength = () => {
     `${inputNum.value} meters = 
     ${Math.round((inputNum.value * 3.2808) * 1000) / 1000} feet |
     ${inputNum.value} feet = 
-    ${Math.round((inputNum.value / 3.281) * 1000) / 1000} meters`
+    ${Math.round((inputNum.value * 3.2808) * 1000) / 1000} meters`
 };    
 
 const convertVolume = () => {
@@ -65,6 +65,16 @@ convertBtn.addEventListener("click", reset);
 */
 
 /* CODE I TRIED BUT DID NOT WORK
+
+let data = [
+    {
+        meters: Math.round((inputNum.value * 3.2808) * 1000) / 1000,
+        feet: Math.round((inputNum.value / 3.281) * 1000) / 1000
+    }
+
+]
+
+console.log(data[0].meters);
 
 let feet = Math.round((inputNum.value * 3.2808) * 1000) / 1000;
 let meters = Math.round((inputNum.value / 3.281) * 1000) / 1000;
