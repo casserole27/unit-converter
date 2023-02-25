@@ -27,6 +27,10 @@ Requirements:
 - generate all conversions when the user clicks "convert"
 - round the numbers down to three decimal places
 
+Personal stretch goals
+ - follow the design spec with no changes
+ - responsive design
+
 
  ### Screenshot
 

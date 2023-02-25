@@ -1,9 +1,3 @@
-/*
-1 meter = 3.281 feet
-1 liter = 0.264 gallon
-1 kilogram = 2.204 pound
-*/
-
 /****** VARIABLES ******/
 
 //BUTTON
@@ -14,6 +8,7 @@ const inputNum = document.getElementById("num-val");
 
 //PARAGRAPHS FOR CONVERSION CONTENT
 const metersToFeet = document.getElementById("m-ft");
+const feetToMeters = document.getElementById("ft-m");
 const litersToGallons = document.getElementById("l-gal");
 const kiloToPounds = document.getElementById("kg-lbs");
 
@@ -21,7 +16,7 @@ const kiloToPounds = document.getElementById("kg-lbs");
 /****** FUNCTIONS ******/
 
 
-//! Can I use parameters and variables to make this DRYer?
+//! Can I use parameters and variables to make this DRYer / less repetitive?
 
 const convertLength = () => { 
     return metersToFeet.textContent = 
@@ -51,7 +46,7 @@ const reset = () =>
     inputNum.value = "";    
  
 
-    /****** EVENT LISTENERS ******/
+ /****** EVENT LISTENERS ******/
 
 //? Is there a way to have less event listeners?
 //? I had to separate them into 4 separate instances to get them to work
@@ -60,3 +55,30 @@ convertBtn.addEventListener("click", convertLength);
 convertBtn.addEventListener("click", convertVolume);
 convertBtn.addEventListener("click", convertMass);
 convertBtn.addEventListener("click", reset);
+
+
+
+/* CONVERSIONS
+1 meter = 3.281 feet
+1 liter = 0.264 gallon
+1 kilogram = 2.204 pound
+*/
+
+/* CODE I TRIED BUT DID NOT WORK
+
+let feet = Math.round((inputNum.value * 3.2808) * 1000) / 1000;
+let meters = Math.round((inputNum.value / 3.281) * 1000) / 1000;
+let gallons = Math.round((inputNum.value * 0.2642) * 1000) / 1000;
+let liters = Math.round((inputNum.value / 0.264) * 1000) / 1000;
+let pounds = Math.round((inputNum.value * 2.2046) * 1000) / 1000;
+let kilos = Math.round((inputNum.value / 2.204) * 1000) / 1000;
+
+const convertUnits = () => 
+    metersToFeet.textContent = `${inputNum.value} meters = ${feet} feet | ${inputNum.value} feet = ${meters} meters`;
+    litersToGallons.textContent = `${numValue} liters = ${gallons} gallons | ${numValue} gallons = ${liters} liters`;
+    kiloToPounds.textContent = `${numValue} kilos = ${pounds} pounds | ${numValue} pounds = ${kilos} kilos`;
+
+convertBtn.addEventListener("click", convertUnits);
+
+
+*/    
