@@ -7,9 +7,9 @@ const convertBtn = document.getElementById("convert");
 const inputNum = document.getElementById("num-val");
 
 //NUMBER VARIABLES
-const metersToFeet = 3.2808;
-const litersToGallons = 0.26417;
-const kilosToPounds = 2.2046
+const metersToFeet = 3.281;
+const litersToGallons = 0.264;
+const kilosToPounds = 2.204
 
 //PARAGRAPHS FOR CONVERSION CONTENT
 const length = document.getElementById("length");
@@ -25,30 +25,24 @@ const convertLength = () => {
     let value = inputNum.value;
 
     return length.textContent = 
-    `${value} meters = 
-    ${Math.round((value * metersToFeet) * 1000) / 1000} feet |
-    ${value} feet = 
-    ${Math.round((value / metersToFeet) * 1000) / 1000} meters`
+    `${value} meters = ${(value * metersToFeet).toFixed(3)} feet |
+    ${value} feet = ${(value / metersToFeet).toFixed(3)} meters`
 };    
 
 const convertVolume = () => {
     let value = inputNum.value;
 
     return volume.textContent = 
-    `${value} liters = 
-    ${Math.round((value * litersToGallons) * 1000) / 1000} gallons |
-    ${value} gallons = 
-    ${Math.round((value / litersToGallons) * 1000) / 1000} liters`
+    `${value} liters = ${(value * litersToGallons).toFixed(3)}} gallons |
+    ${value} gallons = ${(value / litersToGallons).toFixed(3)} liters`
 };
 
 const convertMass = () => { 
     let value = inputNum.value;
 
     return mass.textContent = 
-    `${value} kilos = 
-    ${Math.round((value * kilosToPounds) * 1000) / 1000} pounds |
-    ${value} pounds = 
-    ${Math.round((value / kilosToPounds) * 1000) / 1000} kilos`
+    `${value} kilos = ${(value * kilosToPounds).toFixed(3)} pounds |
+    ${value} pounds = ${(value / kilosToPounds).toFixed(3)} kilos`
 }
 
 const reset = () =>

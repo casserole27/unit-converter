@@ -79,12 +79,33 @@ Check markup and accessibility
 
 ### Built with
 
+- Semantic HTML5 markup
 - CSS custom properties
 - Responsive Web Design
+- vanilla JavaScript
 
 ### What I learned
 
+- It is easier to assign specific numbers to variables to be used inside a function.
+- I tried building with arrow functions, and their syntax seems way more usable to me.
+- I learned the .toFixed() is way easier than Math.round() for certain size numbers.
+
+```javascript
+const convertLength = () => { 
+    let value = inputNum.value;
+
+    return length.textContent = 
+    `${value} meters = ${(value * metersToFeet).toFixed(3)} feet |
+    ${value} feet = ${(value / metersToFeet).toFixed(3)} meters`
+};  
+```  
 ### Continued development
+
+DRYer code questions:
+- functions with parameters
+When I try to make a function with parameters, or use funcion() in an event listener, it doesn't work. It seems to try to run all of the code immediately. Why is this?
+- multiple event listeners
+Is there a way to do this without so many event listeners?
 
 
 ### Useful resources
