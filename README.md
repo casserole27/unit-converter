@@ -103,7 +103,7 @@ const convertLength = () => {
 
 DRYer code questions:
 - functions with parameters
-When I try to make a function with parameters, or use funcion() in an event listener, it doesn't work. It seems to try to run all of the code immediately. Why is this?
+When I try to make a function with parameters, or use function() in an event listener, it doesn't work. It seems to try to run all of the code immediately, or the button click doesn't work. Why is this?
 - multiple event listeners
 Is there a way to do this without so many event listeners?
 
