@@ -6,40 +6,49 @@ const convertBtn = document.getElementById("convert");
 //TEXT INPUT FIELD
 const inputNum = document.getElementById("num-val");
 
+//NUMBER VARIABLES
+const metersToFeet = 3.2808;
+const litersToGallons = 0.26417;
+const kilosToPounds = 2.2046
+
 //PARAGRAPHS FOR CONVERSION CONTENT
-const metersToFeet = document.getElementById("m-ft");
-const feetToMeters = document.getElementById("ft-m");
-const litersToGallons = document.getElementById("l-gal");
-const kiloToPounds = document.getElementById("kg-lbs");
+const length = document.getElementById("length");
+const volume = document.getElementById("volume");
+const mass = document.getElementById("mass");
 
 
 /****** FUNCTIONS ******/
 
-
 //! Can I use parameters and variables to make this DRYer / less repetitive?
 
 const convertLength = () => { 
-    return metersToFeet.textContent = 
-    `${inputNum.value} meters = 
-    ${Math.round((inputNum.value * 3.2808) * 1000) / 1000} feet |
-    ${inputNum.value} feet = 
-    ${Math.round((inputNum.value * 3.2808) * 1000) / 1000} meters`
+    let value = inputNum.value;
+
+    return length.textContent = 
+    `${value} meters = 
+    ${Math.round((value * metersToFeet) * 1000) / 1000} feet |
+    ${value} feet = 
+    ${Math.round((value / metersToFeet) * 1000) / 1000} meters`
 };    
 
 const convertVolume = () => {
-    return litersToGallons.textContent = 
-    `${inputNum.value} liters = 
-    ${Math.round((inputNum.value * 0.2642) * 1000) / 1000} gallons |
-    ${inputNum.value} gallons = 
-    ${Math.round((inputNum.value / 0.264) * 1000) / 1000} liters`
+    let value = inputNum.value;
+
+    return volume.textContent = 
+    `${value} liters = 
+    ${Math.round((value * litersToGallons) * 1000) / 1000} gallons |
+    ${value} gallons = 
+    ${Math.round((value / litersToGallons) * 1000) / 1000} liters`
 };
 
 const convertMass = () => { 
-    return kiloToPounds.textContent = 
-    `${inputNum.value} kilos = 
-    ${Math.round((inputNum.value * 2.2046) * 1000) / 1000} pounds |
-    ${inputNum.value} pounds = 
-    ${Math.round((inputNum.value / 2.204) * 1000) / 1000} kilos`
+    let value = inputNum.value;
+
+    return mass.textContent = 
+    `${value} kilos = 
+    ${Math.round((value * kilosToPounds) * 1000) / 1000} pounds |
+    ${value} pounds = 
+    ${Math.round((value / kilosToPounds) * 1000) / 1000} kilos`
 }
 
 const reset = () =>
@@ -66,6 +75,7 @@ convertBtn.addEventListener("click", reset);
 
 /* CODE I TRIED BUT DID NOT WORK
 
+OBJECT
 let data = [
     {
         meters: Math.round((inputNum.value * 3.2808) * 1000) / 1000,
@@ -89,6 +99,23 @@ const convertUnits = () =>
     kiloToPounds.textContent = `${numValue} kilos = ${pounds} pounds | ${numValue} pounds = ${kilos} kilos`;
 
 convertBtn.addEventListener("click", convertUnits);
+
+FUNCTION WITH PARAMETERS
+
+function convert(text, num) {
+    let value = inputNum.value;
+
+    return text.textContent = 
+    `${value} meters = 
+    ${Math.round((value * num) * 1000) / 1000} feet |
+     ${value} feet = 
+     ${Math.round((value / num) * 1000) / 1000} meters`
+}
+
+convertBtn.addEventListener("click", convert(length, metersToFeet)); 
+convertBtn.addEventListener("click", convert(volume, litersToGallons)); 
+convertBtn.addEventListener("click", convert(mass, kilosToPounds));
+
 
 
 */    
