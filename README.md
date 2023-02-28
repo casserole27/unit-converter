@@ -98,7 +98,9 @@ const convertLength = () => {
     `${value} meters = ${(value * metersToFeet).toFixed(3)} feet |
     ${value} feet = ${(value / metersToFeet).toFixed(3)} meters`
 };  
-```  
+```
+
+  
 ### Continued development
 
 DRYer code questions:
@@ -106,6 +108,54 @@ DRYer code questions:
 When I try to make a function with parameters, or use function() in an event listener, it doesn't work. It seems to try to run all of the code immediately, or the button click doesn't work. Why is this?
 - multiple event listeners
 Is there a way to do this without so many event listeners?
+
+### Code review
+
+- Need hover and focus states for interactive elements.
+
+CSS outline property
+```css
+input:hover, input:focus {
+    width: 200px;
+    outline: 3px solid var(--spring-green);
+    
+}
+```
+
+- A few unused classes and properties in CSS.
+
+I had used these for coding the design and forgot to remove them.
+
+- input positive number only: HTML or CSS
+
+Input number type with minimum entry
+
+```html
+     <label class="hidden" for="number-entry">Number Entry</label>
+      <input type="number" id="num-val" name="number-entry" min="1">    
+```
+
+Hide the spinner
+
+```css
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}  
+```
+
+- JavaScript is pretty short and sweet. A couple ways around all the event listeners. How might we use a parameter?
+
+- Alternative for input reset.
+
+
 
 
 ### Useful resources

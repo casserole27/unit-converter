@@ -15,6 +15,7 @@ Figma design file: https://www.figma.com/file/w4ctQVGzbJpFRoS41wQi4V/Unit-Conver
     /*COLORS*/
 
     --periwinkle: #6943FF;
+    --spring-green: rgb(78, 212, 78);
     --dark-gray: #1F2937;
     --med-gray: #273549;
     --lilac: #CCC1FF;
@@ -74,31 +75,53 @@ input {
     font-weight: 800;
     background-color: var(--periwinkle);
     color: var(--white);
-    accent-color: #B295FF;
     text-align: center;
     padding: .25rem;
     margin: 0 auto;
     margin-bottom: 1.7rem;
     border: 2px solid #B295FF;
+    transition: ease-in-out, width .35s ease-in-out;
 }
 
-input::placeholder {
-    color: white;
-    font-weight: 800;
+
+input:hover, input:focus {
+    width: 200px;
+    outline: 3px solid var(--spring-green);
+    
 }
 
+/****** REMOVE NUMBER SPINNER FROM INPUT ******/
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 button {
     display: block;
-    width: 120px;
+    /* width: 120px; */
     color: var(--dark-gray);
     background-color: var(--white);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     margin: 0 auto;
+    border: none;
     border-radius: var(--br-soft);
+    }
+
+button:hover, button:focus {
+    background-color: var(--spring-green);
+    color: var(--dark-gray);
+    transform: scale(1.1);
 }
 
 @media (max-width: 400px) {
