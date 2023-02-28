@@ -20,14 +20,16 @@ const mass = document.getElementById("mass");
 /****** FUNCTIONS ******/
 
 //! Can I use parameters and variables to make this DRYer / less repetitive?
-//TODO Micha's suggestion, also makes less event listeners
+//* Micha's suggestion:
+//* eliminates repetitive lines of code
+//* eliminates need for multiple event listeners
 
 const doConversions = (val) => {
     val = inputNum.value
     convertLength(val)
     convertVolume(val)
     convertMass(val)
-    reset(val)
+    reset()
 }
 
 const convertLength = (value) => { 
@@ -63,11 +65,13 @@ const reset = () =>
 //? Is there a way to have less event listeners?
 //? I had to separate them into 4 separate instances to get them to work
 
+convertBtn.addEventListener("click", doConversions);
+
 // convertBtn.addEventListener("click", convertLength); 
 // convertBtn.addEventListener("click", convertVolume);
 // convertBtn.addEventListener("click", convertMass);
 // convertBtn.addEventListener("click", reset);
-convertBtn.addEventListener("click", doConversions);
+
 
 
 /* CONVERSIONS
@@ -76,7 +80,13 @@ convertBtn.addEventListener("click", doConversions);
 1 kilogram = 2.204 pound
 */
 
+
+
+
+
+//! HEY YOU!!! THIS CODE YOU TRIED IS TOO COMPLICATED!!!
 /* CODE I TRIED BUT DID NOT WORK
+
 
 OBJECT
 let data = [
